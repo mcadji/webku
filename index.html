@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alya Ramadhani | Web Developer dan Desainer Antarmuka</title>
+  <meta name="description" content="Portofolio Alya Ramadhani, web developer dan desainer antarmuka yang membuat situs cepat, mudah dibaca, dan nyaman dipakai.">
+
+  <!-- Font (opsional, ada cadangan jika offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- File CSS terpisah -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="lewati" href="#konten">Lewati ke konten utama</a>
+
+  <div class="tata-letak">
+
+    <!-- Kolom kiri: identitas dan navigasi -->
+    <header class="sisi">
+      <div class="sisi-atas">
+        <h1 class="nama">Alya Ramadhani</h1>
+        <p class="peran">Web developer dan desainer antarmuka</p>
+
+        <nav aria-label="Navigasi utama">
+          <ul class="menu">
+            <li><a href="#tentang" data-bagian="tentang">Tentang</a></li>
+            <li><a href="#proyek" data-bagian="proyek">Proyek</a></li>
+            <li><a href="#pengalaman" data-bagian="pengalaman">Pengalaman</a></li>
+            <li><a href="#keahlian" data-bagian="keahlian">Keahlian</a></li>
+            <li><a href="#kontak" data-bagian="kontak">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sisi-bawah">
+        <button type="button" class="tombol-tema" id="tombolTema">Mode gelap</button>
+        <ul class="sosial">
+          <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:halo@contoh.com">Email</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Kolom kanan: konten -->
+    <main id="konten" class="konten">
+
+      <section id="tentang" class="bagian" aria-labelledby="jdl-tentang">
+        <h2 id="jdl-tentang" class="sr-saja">Tentang</h2>
+        <p class="pernyataan">
+          Saya membuat situs web yang cepat, mudah dibaca, dan nyaman dipakai, dari sketsa pertama sampai rilis.
+        </p>
+        <p class="paragraf">
+          Enam tahun terakhir saya bekerja dengan startup dan usaha kecil untuk membangun toko online, dasbor internal, dan situs profil perusahaan. Saya suka mengerjakan desain dan kode sekaligus, karena keputusan kecil di satu sisi sering menentukan hasil di sisi lain.
+        </p>
+
+        <dl class="fakta">
+          <div>
+            <dt>Lokasi</dt>
+            <dd>Pontianak, Indonesia</dd>
+          </div>
+          <div>
+            <dt>Fokus</dt>
+            <dd>Frontend, desain UI, aksesibilitas</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Terbuka untuk proyek freelance</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="proyek" class="bagian" aria-labelledby="jdl-proyek">
+        <h2 id="jdl-proyek" class="judul-bagian">Proyek</h2>
+
+        <div class="saring" role="group" aria-label="Saring proyek berdasarkan jenis">
+          <button type="button" class="saring-tombol" data-saring="semua" aria-pressed="true">Semua</button>
+          <button type="button" class="saring-tombol" data-saring="web" aria-pressed="false">Situs web</button>
+          <button type="button" class="saring-tombol" data-saring="aplikasi" aria-pressed="false">Aplikasi</button>
+          <button type="button" class="saring-tombol" data-saring="desain" aria-pressed="false">Desain</button>
+        </div>
+        <p class="jumlah" id="jumlahProyek" aria-live="polite">Menampilkan 5 proyek</p>
+
+        <ul class="daftar-proyek" id="daftarProyek">
+          <li class="proyek" data-kategori="web">
+            <div class="mini mini-1" aria-hidden="true"></div>
+            <div class="proyek-isi">
+              <h3><a href="#">Toko Kopi Kalimantan</a></h3>
+              <p>Toko online untuk roastery lokal dengan katalog biji kopi, keranjang, dan pembayaran transfer bank. Waktu muat halaman di bawah dua detik di jaringan 4G.</p>
+              <ul class="tag"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+            <span class="tahun">2026</span>
+          </li>
+
+          <li class="proyek" data-kategori="aplikasi">
+            <div class="mini mini-2" aria-hidden="true"></div>
+            <div class="proyek-isi">
+              <h3><a href="#">Catatan Kas Warung</a></h3>
+              <p>Aplikasi pencatat pemasukan dan pengeluaran harian untuk pemilik warung. Bisa dipakai tanpa internet dan menyinkronkan data saat kembali online.</p>
+              <ul class="tag"><li>React</li><li>Node.js</li><li>PostgreSQL</li></ul>
+            </div>
+            <span class="tahun">2025</span>
+          </li>
+
+          <li class="proyek" data-kategori="desain">
+            <div class="mini mini-3" aria-hidden="true"></div>
+            <div class="proyek-isi">
+              <h3><a href="#">Sistem Desain Klinik Sehat</a></h3>
+              <p>Kumpulan komponen, warna, dan aturan tipografi untuk tiga aplikasi klinik. Tim kini menyusun halaman baru dalam hitungan jam, bukan hari.</p>
+              <ul class="tag"><li>Figma</li><li>Storybook</li></ul>
+            </div>
+            <span class="tahun">2025</span>
+          </li>
+
+          <li class="proyek" data-kategori="web">
+            <div class="mini mini-4" aria-hidden="true"></div>
+            <div class="proyek-isi">
+              <h3><a href="#">Situs Festival Budaya Sungai</a></h3>
+              <p>Situs acara dengan jadwal, peta lokasi, dan pendaftaran peserta. Dibuka lebih dari 40 ribu kali selama sepekan festival.</p>
+              <ul class="tag"><li>HTML</li><li>CSS</li><li>Leaflet</li></ul>
+            </div>
+            <span class="tahun">2024</span>
+          </li>
+
+          <li class="proyek" data-kategori="aplikasi">
+            <div class="mini mini-5" aria-hidden="true"></div>
+            <div class="proyek-isi">
+              <h3><a href="#">Dasbor Pengiriman Barang</a></h3>
+              <p>Dasbor untuk memantau status paket, rute kurir, dan keterlambatan. Admin bisa menemukan paket bermasalah dalam dua klik.</p>
+              <ul class="tag"><li>Vue</li><li>Chart.js</li><li>REST API</li></ul>
+            </div>
+            <span class="tahun">2023</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="pengalaman" class="bagian" aria-labelledby="jdl-pengalaman">
+        <h2 id="jdl-pengalaman" class="judul-bagian">Pengalaman</h2>
+        <ol class="garis-waktu">
+          <li>
+            <p class="waktu">2024 sampai sekarang</p>
+            <h3>Frontend developer senior, Studio Tanjung</h3>
+            <p>Memimpin tim kecil yang membangun situs dan aplikasi web untuk klien. Menyusun standar kode dan pemeriksaan aksesibilitas yang kini dipakai di semua proyek.</p>
+          </li>
+          <li>
+            <p class="waktu">2021 sampai 2024</p>
+            <h3>Web developer, Pasar Digital Nusantara</h3>
+            <p>Mengembangkan halaman produk dan alur pembayaran. Perubahan yang saya buat pada halaman checkout menaikkan pesanan selesai sebesar 18 persen.</p>
+          </li>
+          <li>
+            <p class="waktu">2019 sampai 2021</p>
+            <h3>Desainer web freelance</h3>
+            <p>Mengerjakan situs profil untuk usaha kecil, dari riset kebutuhan sampai peluncuran dan pelatihan pengelolaan konten.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="keahlian" class="bagian" aria-labelledby="jdl-keahlian">
+        <h2 id="jdl-keahlian" class="judul-bagian">Keahlian</h2>
+        <div class="kelompok-keahlian">
+          <div>
+            <h3>Frontend</h3>
+            <ul><li>HTML dan CSS modern</li><li>JavaScript dan TypeScript</li><li>React dan Vue</li></ul>
+          </div>
+          <div>
+            <h3>Backend</h3>
+            <ul><li>Node.js dan Express</li><li>PostgreSQL dan MongoDB</li><li>REST API</li></ul>
+          </div>
+          <div>
+            <h3>Desain</h3>
+            <ul><li>Figma</li><li>Sistem desain</li><li>Riset pengguna</li></ul>
+          </div>
+          <div>
+            <h3>Alat kerja</h3>
+            <ul><li>Git dan GitHub</li><li>Uji aksesibilitas</li><li>Optimasi kecepatan</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontak" class="bagian" aria-labelledby="jdl-kontak">
+        <h2 id="jdl-kontak" class="judul-bagian">Kontak</h2>
+        <p class="paragraf">Ceritakan singkat apa yang ingin Anda bangun. Saya membalas dalam dua hari kerja.</p>
+
+        <form id="formKontak" class="form" novalidate>
+          <div class="baris-form">
+            <label for="fNama">Nama</label>
+            <input type="text" id="fNama" name="nama" autocomplete="name" required>
+            <p class="galat" id="galatNama" role="alert"></p>
+          </div>
+
+          <div class="baris-form">
+            <label for="fEmail">Email</label>
+            <input type="email" id="fEmail" name="email" autocomplete="email" required>
+            <p class="galat" id="galatEmail" role="alert"></p>
+          </div>
+
+          <div class="baris-form">
+            <label for="fPesan">Pesan</label>
+            <textarea id="fPesan" name="pesan" rows="5" required></textarea>
+            <p class="galat" id="galatPesan" role="alert"></p>
+          </div>
+
+          <button type="submit" class="tombol">Kirim pesan</button>
+          <p class="status" id="statusForm" role="status"></p>
+        </form>
+      </section>
+
+      <footer class="kaki">
+        <p>&copy; <span id="tahunIni">2026</span> Alya Ramadhani. Dibuat dengan HTML, CSS, dan JavaScript.</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- File JavaScript terpisah -->
+  <script src="script.js" defer></script>
+</body>
+</html>
